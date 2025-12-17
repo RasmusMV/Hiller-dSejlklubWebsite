@@ -26,4 +26,10 @@
     <None Include="wwwroot\Pictures\Michael-Bestyrelse.jpeg" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Reference Include="Hillerød Sejlklub">
+      <HintPath>..\..\Eksamens-case-Hiller-d-Sejlklub\Hillerød Sejlklub\bin\Debug\net8.0\Hillerød Sejlklub.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>

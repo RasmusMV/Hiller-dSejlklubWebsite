@@ -1,0 +1,45 @@
+﻿@page
+@model HillerødSejlklubWebsite.Pages.CreateBookingModel
+@{
+	ViewData["CreateBooking"] = "CreateBooking";
+}
+
+<h1>CreateBooking</h1>
+<div class="row">
+	<div class="col-md-4">
+		<form method="post">
+			<div class="form-group">
+				<label asp-for="@Model.Boat" class="control-label"></label>
+				<select asp-for="@Model.Boat" class="form-control">
+					<option value="">-- Select Boat --</option>
+					@foreach (var boat in Model.Boats)
+					{
+						<option value="@boat.Name">@boat.Name</option>
+					}
+				</select>
+				
+			</div>
+			<div class="form-group">
+				<label asp-for="@Model.Destination" class="control-label"></label>
+				<input asp-for="@Model.Destination" class="form-control" />
+				<span asp-validation-for="Destination" class="text-danger"></span>
+			</div>
+			<div class="form-group">
+				<label asp-for="@Model.Start" class="control-label"></label>
+				<input asp-for="@Model.Start" class="form-control" />
+				<span asp-validation-for="Start" class="text-danger"></span>
+			</div>
+			<div class="form-group">
+				<label asp-for="@Model.Finish" class="control-label"></label>
+				<input asp-for="@Model.Finish" class="form-control" />
+				<span asp-validation-for="Finish" class="text-danger"></span>
+			</div>
+			<div class="form-group">
+				<input type="submit" value="create" class="btn btn-primary" />
+			</div>
+		</form>
+	</div>
+</div>
+<div>
+	<a asp-page="YourBookings">Back to list</a>
+</div>
