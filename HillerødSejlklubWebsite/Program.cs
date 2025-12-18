@@ -1,7 +1,15 @@
+using Hillerød_Sejlklub.Interfaces;
+using Hillerød_Sejlklub.Repositories;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+
+builder.Services.AddSingleton<IBookingRepository>(BookingRepository.GetInstance());
+builder.Services.AddSingleton<IUserRepository>(UserRepository.GetInstance());
+builder.Services.AddSingleton<IBoatRepository>(BoatRepository.GetInstanceFromBoat());
+
 
 var app = builder.Build();
 
