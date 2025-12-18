@@ -3,17 +3,73 @@
 @{
 }
 
-
 <head>
+    <style>
+        .titel {
+            display: block;
+            font-size: 55px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-align: center;
+        }
 
+        .center-text {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .contact-box {
+            width: 45%;
+            border: 1px solid #ccc;
+            padding: 20px;
+        }
+
+        .container {
+            display: flex;
+            gap: 40px;
+            margin-top: 30px;
+        }
+
+        .image-center {
+            display: block;
+            margin: 30px auto;
+            max-width: 40%;
+        }
+    </style>
 </head>
 
 <body>
-    <style>
-   
+    <div class="titel">Kontakt</div>
 
-    </style>
+    <p class="center-text">
+        Vil du vide mere end du kan finde på denne hjemmeside så kontakt os.
+    </p>
 
+    <img src="~/images/kontakt.jpg"
+         alt="Kontakt Hillerød Sejlklub"
+         class="image-center" />
 
+    <div class="container">
+        <div class="contact-box">
+            <h2>Ring til os</h2>
+            <p>Telefon: 12345678</p>
+            <p>Tirsdag og Torsdag 9-13</p>
+        </div>
 
+        <div class="contact-box">
+            <h2>Skriv til os</h2>
+            <p>Email: hillerodsejl@gmail.com</p>
+        </div>
+    </div>
+
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    
 </body>
+
