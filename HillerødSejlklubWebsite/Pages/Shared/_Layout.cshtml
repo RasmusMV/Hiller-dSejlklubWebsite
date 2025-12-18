@@ -11,8 +11,13 @@
 <body>
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+
             <div class="container">
-                <a class="navbar-brand" asp-area="" asp-page="/Index">HillerødSejlklubWebsite</a>
+                <img src="c:\users\lenna\onedrive\dokumenter\github\eksamens-case-hiller-d-sejlklub\hiller-dsejlklubwebsite-master\hillerødsejlklubwebsite\pages\shared\logo hillerød sejklub.jpg" width="35" height="35" />
+
+
+
+                <a class="navbar-brand" asp-area="" asp-page="Index">Hillerød Sejlklub</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -20,10 +25,48 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Index">Forside</a>
                         </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" style="color:black" aria-expanded="true">For Medlemmer</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="kapsejlads">Kapsejlads</a>
+                                <a class="dropdown-item" href="Både">Kalender</a>
+                                <a class="dropdown-item" href="YourBookings">Dine bookinger</a>
+                                <a class="dropdown-item" href="#">Book en båd</a>
+                            </div>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" style="color:black " aria-expanded="true">Om os</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Om os</a>
+                                <a class="dropdown-item" href="Både">Både</a>
+                                <a class="dropdown-item" href="Bestyrelse">Bestyrelsen</a>
+                                <a class="dropdown-item" href="Hold">Hold</a>
+                            </div>
+                        </li>
+
+
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Billeder">Billeder</a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" style=" color:black" aria-expanded="true">Regler</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Regler</a>
+                                <a class="dropdown-item" href="Både">Vedtægter</a>
+                                <a class="dropdown-item" href="Lokationsregler">Lokationsregler</a>
+                            </div>
+                        </li>
+
+                        <li class="nav-item" .container {
+                            align-items: flex-end;
+                            display: flex;
+                            flex-direction: column;
+                            }>
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Login">Bruger</a>
                         </li>
                     </ul>
                 </div>
@@ -38,7 +81,35 @@
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2025 - HillerødSejlklubWebsite - <a asp-area="" asp-page="/Privacy">Privacy</a>
+            <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+                <div class="container">
+
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                        <ul class="navbar-nav flex-grow-1">
+                            <li class="nav-item">
+                                <a class="form-text text-dark">
+                                    Lokation .. <br /> CVR ....
+                                </a>
+
+
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-page="/Kontaktinformation">Kontaktinformation</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-page="/Om Os">Om os</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-page="/Vedtægter">Vedtægter</a>
+
+                        </ul>
+                    </div>
+                </div>
+            </nav>
         </div>
     </footer>
 

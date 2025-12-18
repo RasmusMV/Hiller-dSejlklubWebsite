@@ -1,0 +1,68 @@
+﻿@page
+@model HillerødSejlklubWebsite.Pages.YourBookingsModel
+@using Hillerød_Sejlklub.Interfaces
+@inject IBookingRepository repository
+@{
+	ViewData["Title"] = "YourBookings";
+}
+<h1>Your Bookings</h1>
+
+<p>
+	<a asp-page="CreateBooking">Create New</a>
+</p>
+<div>
+	<u1>
+		<li> There are @repository.BookingList.Count events</li>
+	</u1>
+</div>
+
+<table class="table">
+	<thead>
+		<tr>
+			<th>
+				Member
+			</th>
+			<th>
+				Boat
+			</th>
+			<th>
+				Destination
+			</th>
+			<th>
+				Start
+			</th>
+			<th>
+				End
+			</th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var item in Model.Bookings)
+		{
+			<tr>
+				<td>
+					@item.Value.Member
+				</td>
+				<td>
+					@item.Value.Boat.Name
+				</td>
+				<td>
+					@item.Value.Destination
+				</td>
+				<td>
+					@item.Value.DateStart
+				</td>
+				<td>
+					@item.Value.DateFinish
+				</td>
+				<td>
+					<a asp-page="EditBookings" asp-route-id="@item.Value">Edit</a>
+
+					<a asp-page="YourBookings" asp-page-handler="Delete" asp-route-id="@item.Value.Id"
+					   onclick="return confirm('Are you sure you want to delete this event?');">Delete </a>
+
+				</td>
+			</tr>
+		}
+	</tbody>
+</table>
